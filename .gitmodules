@@ -1,0 +1,3 @@
+[submodule "lua/forked-plugins/pink-panic.nvim"]
+	path = lua/forked-plugins/pink-panic.nvim
+	url = https://github.com/joel-singh/pink-panic.nvim.git
