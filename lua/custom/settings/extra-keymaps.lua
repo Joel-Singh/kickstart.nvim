@@ -1,1 +1,1 @@
-vim.keymap.set('n', '<Leader>W', '<CMD>w<CR>', { desc = 'Write file' })
+vim.keymap.set('n', 'W', '<CMD>w<CR>', { desc = 'Write file' })
