@@ -942,5 +942,6 @@ require('lazy').setup({
 
 require 'custom.settings.run_current_file'
 require 'custom.settings.extra-keymaps'
+require 'custom.settings.telekasten-keymaps'
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
