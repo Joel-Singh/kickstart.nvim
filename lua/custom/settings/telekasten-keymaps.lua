@@ -1,4 +1,5 @@
 -- Telekasten keymaps
+vim.keymap.set('n', '<leader>zi', ':lua require("telekasten").insert_link()<CR>', { desc = 'Insert Link' })
 vim.keymap.set('n', '<leader>zf', ':lua require("telekasten").find_notes()<CR>', { desc = 'Find Notes' })
 vim.keymap.set('n', '<leader>zd', ':lua require("telekasten").find_daily_notes()<CR>', { desc = 'Find Daily Notes' })
 vim.keymap.set('n', '<leader>zg', ':lua require("telekasten").search_notes()<CR>', { desc = 'Search Notes' })
@@ -11,7 +12,6 @@ vim.keymap.set('n', '<leader>zN', ':lua require("telekasten").new_templated_note
 vim.keymap.set('n', '<leader>zy', ':lua require("telekasten").yank_notelink()<CR>', { desc = 'Yank Notelink' })
 vim.keymap.set('n', '<leader>zc', ':lua require("telekasten").show_calendar()<CR>', { desc = 'Show Calendar' })
 vim.keymap.set('n', '<leader>zC', ':CalendarT<CR>', { desc = ':CalendarT' })
-vim.keymap.set('n', '<leader>zi', ':lua require("telekasten").paste_img_and_link()<CR>', { desc = 'Paste Img And Link' })
 vim.keymap.set('n', '<leader>zt', ':lua require("telekasten").toggle_todo()<CR>', { desc = 'Toggle Todo' })
 vim.keymap.set('v', '<leader>zt', ':lua require("telekasten").toggle_todo({ v = true })<CR>', { desc = 'Toggle Todo' })
 vim.keymap.set('n', '<leader>zb', ':lua require("telekasten").show_backlinks()<CR>', { desc = 'Show Backlinks' })
