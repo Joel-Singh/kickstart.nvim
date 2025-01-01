@@ -1,5 +1,3 @@
-vim.keymap.set('n', 'W', '<CMD>w<CR>', { desc = 'Write file' })
-
 -- Telekasten keymaps
 vim.keymap.set('n', '<leader>zf', ':lua require("telekasten").find_notes()<CR>', { desc = 'Find Notes' })
 vim.keymap.set('n', '<leader>zd', ':lua require("telekasten").find_daily_notes()<CR>', { desc = 'Find Daily Notes' })
