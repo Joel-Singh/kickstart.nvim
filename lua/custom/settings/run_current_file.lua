@@ -9,7 +9,8 @@ local function run_current_file()
   end
 
   if vim.bo.filetype == 'rust' then
-    vim.cmd '!cargo run'
+    vim.cmd 'tabnew | term cargo run'
+    vim.cmd 'startinsert'
   end
 end
 
