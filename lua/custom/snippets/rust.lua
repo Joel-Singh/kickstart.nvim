@@ -42,4 +42,14 @@ return {
       { function_name = i(1), btn_component = i(2), exit = i(3) }
     )
   ),
+  s(
+    'component',
+    fmt(
+      [[
+      #[derive(Component)]
+      pub struct {name};
+      ]],
+      { name = i(1) }
+    )
+  ),
 }
