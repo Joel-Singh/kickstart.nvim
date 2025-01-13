@@ -32,14 +32,15 @@ return {
     fmt(
       [[
       fn {function_name}(
-        interaction: Single<&Interaction, (With<{btn_component}>, Changed<Interaction>)>
+        interaction: Single<&Interaction, (With<{btn_component}>, Changed<Interaction>)>,
+        {params}
       ) {{
         if let Interaction::Pressed = *interaction {{
           {exit}
         }}
       }}
       ]],
-      { function_name = i(1), btn_component = i(2), exit = i(3) }
+      { function_name = i(1), btn_component = i(2), params = i(3), exit = i(4) }
     )
   ),
   s(
