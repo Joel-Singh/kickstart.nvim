@@ -53,4 +53,14 @@ return {
       { name = i(1) }
     )
   ),
+  s(
+    'resource',
+    fmt(
+      [[
+      #[derive(Resource)]
+      pub struct {name};
+      ]],
+      { name = i(1) }
+    )
+  ),
 }
