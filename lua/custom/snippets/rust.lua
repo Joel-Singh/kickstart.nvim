@@ -82,4 +82,29 @@ fn setup(mut commands: Commands) {{
       { plugin_name = i(1, 'plugin_name'), state_enter = i(2, 'State'), state_exit = rep(2), setup = i(3) }
     )
   ),
+  s(
+    'root-node',
+    fmt(
+      [[
+width: Val::Vw(100.0),
+height: Val::Vh(100.0),
+flex_direction: FlexDirection::Column,
+justify_content: JustifyContent::Center,
+align_items: AlignItems::Center,
+      ]],
+      {}
+    )
+  ),
+  s(
+    'instantiate-struct',
+    fmt(
+      [[
+{struct_name} {{
+  {exit}
+  ..default()
+}}
+      ]],
+      { struct_name = i(1, 'struct_name'), exit = i(2, 'properties') }
+    )
+  ),
 }
