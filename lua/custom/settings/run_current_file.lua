@@ -1,4 +1,5 @@
 local function run_current_file()
+  vim.cmd 'wa'
   if vim.bo.filetype == 'tex' then
     vim.cmd('!' .. vim.fn.expand '%:p:h' .. '/' .. 'compile.sh')
   end
