@@ -63,4 +63,23 @@ return {
       { name = i(1) }
     )
   ),
+  s(
+    'new-plugin',
+    fmt(
+      [[
+use bevy::prelude::*;
+
+pub fn {plugin_name}(app: &mut App) {{
+    app.add_systems(OnEnter({state_enter}), setup)
+        .add_systems(OnExit({state_exit}), ());
+}}
+
+fn setup(mut commands: Commands) {{
+{setup}
+}}
+
+      ]],
+      { plugin_name = i(1, 'plugin_name'), state_enter = i(2, 'State'), state_exit = rep(2), setup = i(3) }
+    )
+  ),
 }
