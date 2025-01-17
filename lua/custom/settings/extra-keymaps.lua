@@ -6,3 +6,5 @@ vim.keymap.set('n', '<Leader>cc', '<CMD>CodeCompanionChat<CR>', { desc = '[C]ode
 vim.keymap.set('n', '<Tab>i', '<CMD>tabnew<CR>', { desc = '[Tab][I]nstantiate' })
 vim.keymap.set('n', '<Tab>n', '<CMD>tabnext<CR>', { desc = '[Tab][N]ext' })
 vim.keymap.set('n', '<Tab>c', '<CMD>tabclose<CR>', { desc = '[Tab][C]lose' })
+
+vim.cmd 'command! Q qa'
