@@ -5,4 +5,3 @@ vim.api.nvim_create_autocmd({ 'BufWritePost' }, { pattern = { '*.tex' }, command
 
 vim.api.nvim_create_autocmd({ 'VimLeavePre' }, { command = 'mksession! ~/nvim/Session.vim' })
 
-vim.api.nvim_create_autocmd('InsertLeave', { command = 'write' })
