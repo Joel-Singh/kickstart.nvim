@@ -48,7 +48,7 @@ return {
     fmt(
       [[
       #[derive(Component)]
-      pub struct {name};
+      struct {name};
       ]],
       { name = i(1) }
     )
@@ -58,7 +58,7 @@ return {
     fmt(
       [[
       #[derive(Resource)]
-      pub struct {name};
+      struct {name};
       ]],
       { name = i(1) }
     )
