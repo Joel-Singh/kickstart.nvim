@@ -28,22 +28,6 @@ local k = require('luasnip.nodes.key_indexer').new_key
 
 return {
   s(
-    'btn_interaction',
-    fmt(
-      [[
-      fn {function_name}(
-        interaction: Single<&Interaction, (With<{btn_component}>, Changed<Interaction>)>,
-        {params}
-      ) {{
-        if let Interaction::Pressed = *interaction {{
-          {exit}
-        }}
-      }}
-      ]],
-      { function_name = i(1), btn_component = i(2), params = i(3), exit = i(4) }
-    )
-  ),
-  s(
     'component',
     fmt(
       [[
