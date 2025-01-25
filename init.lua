@@ -733,7 +733,8 @@ require('lazy').setup({
       -- See `:help cmp`
       local cmp = require 'cmp'
       local luasnip = require 'luasnip'
-      luasnip.config.setup {}
+
+      luasnip.config.setup { enable_autosnippets = true }
 
       cmp.setup {
         snippet = {
