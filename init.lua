@@ -596,6 +596,7 @@ require('lazy').setup({
         -- ts_ls = {},
         --
 
+        harper_ls = { filetypes = { 'markdown' } },
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
