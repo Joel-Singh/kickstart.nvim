@@ -3,6 +3,16 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, { pattern = { '*.md',
 
 vim.api.nvim_create_autocmd({ 'BufWritePost' }, { pattern = { '*.tex' }, command = 'silent !pdflatex -output-directory=output % > /dev/null &' })
 
+vim.api.nvim_create_autocmd('InsertLeave', {
+  pattern = '*.md',
+  command = 'write | doautocmd BufWritePost',
+})
+
+vim.api.nvim_create_autocmd(
+  { 'BufWritePost' },
+  { pattern = { '*.md' }, command = 'silent !pandoc % -o ~/Personal/Temporary/current_md_file_in_nvim.pdf > /dev/null &' }
+)
+
 vim.api.nvim_create_autocmd({ 'VimLeavePre' }, { command = 'mksession! ~/nvim/Session.vim' })
 
 -- Restore cursor to file position in previous editing session
