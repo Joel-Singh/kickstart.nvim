@@ -5,7 +5,16 @@ vim.api.nvim_create_autocmd({ 'BufWritePost' }, { pattern = { '*.tex' }, command
 
 vim.api.nvim_create_autocmd('InsertLeave', {
   pattern = '*.md',
-  command = 'write | doautocmd BufWritePost',
+  command = 'write | doautocmd BufWritePre | doautocmd BufWritePost',
+})
+
+vim.api.nvim_create_autocmd('BufWritePre', {
+  pattern = '*.md',
+  callback = function()
+    local save_cursor = vim.fn.getpos '.'
+    vim.cmd [[silent! %s/\([^\ ]\)$/\1  ]]
+    vim.fn.setpos('.', save_cursor)
+  end,
 })
 
 vim.api.nvim_create_autocmd(
