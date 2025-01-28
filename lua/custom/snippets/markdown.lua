@@ -62,5 +62,9 @@ return {
   create_snippet('overline', [[\overline{<>}]], { i(1) }),
   create_snippet('powerset', [[\mathcal{P}(<>)]], { i(1) }),
   create_snippet('bar', [[|<>|]], { i(1) }),
+  create_snippet('mono', [[\texttt{<>}]], { i(1) }),
+  create_snippet('italic', [[\textit{<>}]], { i(1) }),
+  create_snippet('rightarrow', [[\rightarrow]]),
+  create_snippet('lambda', [[\lambda]]),
   s({ trig = 'textit', snippetType = 'autosnippet' }, fmta([[\textit{<text>}<end>]], { text = i(1), ['end'] = i(2) })),
 }
