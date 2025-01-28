@@ -27,6 +27,7 @@ local ms = ls.multi_snippet
 local k = require('luasnip.nodes.key_indexer').new_key
 
 return {
+  s({ trig = 'asset_server', snippetType = 'autosnippet' }, fmt([[asset_server: ResMut<AssetServer>]], {})),
   s(
     'component',
     fmt(
@@ -38,7 +39,7 @@ return {
     )
   ),
   s(
-    'resource',
+    { trig = 'resource', snippetType = 'autosnippet' },
     fmt(
       [[
       #[derive(Resource)]
@@ -80,13 +81,13 @@ align_items: AlignItems::Center,
     )
   ),
   s(
-    'instantiate-struct',
+    { trig = '_struct', snippetType = 'autosnippet' },
     fmt(
       [[
 {struct_name} {{
   {exit}
   ..default()
-}}
+}},
       ]],
       { struct_name = i(1, 'struct_name'), exit = i(2, 'properties') }
     )
