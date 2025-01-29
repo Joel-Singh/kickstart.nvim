@@ -73,5 +73,9 @@ return {
   create_snippet('neg', [[\neg]]),
   create_snippet('implies', [[\implies]]),
   create_snippet('biimplication', [[\iff]]),
+  create_snippet('forall', [[\forall]]),
+  create_snippet('exists', [[\exists]]),
+  create_snippet('bar', [[|<>|]], { i(1) }),
+  create_snippet('sqrt', [[\sqrt{<>}]], { i(1) }),
   s({ trig = 'textit', snippetType = 'autosnippet' }, fmta([[\textit{<text>}<end>]], { text = i(1), ['end'] = i(2) })),
 }
