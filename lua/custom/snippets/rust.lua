@@ -28,6 +28,7 @@ local k = require('luasnip.nodes.key_indexer').new_key
 
 return {
   s({ trig = 'asset_server', snippetType = 'autosnippet' }, fmt([[asset_server: ResMut<AssetServer>]], {})),
+  s({ trig = '#cmds', snippetType = 'autosnippet' }, fmt([[commands: Commands]], {})),
   s(
     'component',
     fmt(
