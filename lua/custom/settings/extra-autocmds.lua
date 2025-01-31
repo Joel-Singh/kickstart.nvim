@@ -8,14 +8,14 @@ vim.api.nvim_create_autocmd('InsertLeave', {
   command = 'write | doautocmd BufWritePre | doautocmd BufWritePost',
 })
 
-vim.api.nvim_create_autocmd('BufWritePre', {
-  pattern = '*.md',
-  callback = function()
-    local save_cursor = vim.fn.getpos '.'
-    vim.cmd [[silent! %s/\([^\ ]\)$/\1  ]]
-    vim.fn.setpos('.', save_cursor)
-  end,
-})
+-- vim.api.nvim_create_autocmd('BufWritePre', {
+--   pattern = '*.md',
+--   callback = function()
+--     local save_cursor = vim.fn.getpos '.'
+--     vim.cmd [[silent! %s/\([^\ ]\)$/\1  ]]
+--     vim.fn.setpos('.', save_cursor)
+--   end,
+-- })
 
 vim.api.nvim_create_autocmd({ 'BufWritePost' }, { pattern = { '*.md' }, command = 'silent !pandoc % -o ~/Personal/Temporary/current_md_file_in_nvim.pdf &' })
 
