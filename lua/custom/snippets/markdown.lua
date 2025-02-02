@@ -56,6 +56,7 @@ return {
   create_snippet('ellipses', [[\ldots]]),
   create_snippet('nchoosek', [[\binom{<>}{<>}]], { i(1), i(2) }),
   create_snippet('mm', [[$<>$]], { i(1) }),
+  create_snippet('-text', [[text]]),
   create_snippet('text', [[\text{ <> }]], { i(1) }),
   create_snippet('-set', [[set]]),
   create_snippet('set', [[\{<>\}]], { i(1) }),
