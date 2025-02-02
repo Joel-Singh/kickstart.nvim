@@ -17,6 +17,15 @@ vim.api.nvim_create_autocmd('BufWritePre', {
   end,
 })
 
+vim.api.nvim_create_autocmd('BufWritePre', {
+  pattern = '*.md',
+  callback = function()
+    local save_cursor = vim.fn.getpos '.'
+    vim.cmd [[silent! %s/\(\S\)  \(\S\)/\1 \2/g]]
+    vim.fn.setpos('.', save_cursor)
+  end,
+})
+
 vim.api.nvim_create_autocmd({ 'BufWritePost' }, { pattern = { '*.md' }, command = 'silent !pandoc % -o ~/Personal/Temporary/current_md_file_in_nvim.pdf &' })
 
 vim.api.nvim_create_autocmd({ 'VimLeavePre' }, { command = 'mksession! ~/nvim/Session.vim' })
