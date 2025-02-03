@@ -1,7 +1,7 @@
 local function run_current_file()
   vim.cmd 'wa'
   if vim.bo.filetype == 'tex' then
-    vim.cmd 'silent !zathura output/%:t:r.pdf &'
+    vim.cmd 'silent !zathura %:h/output/*.pdf &'
   end
 
   if vim.bo.filetype == 'python' then
