@@ -16,15 +16,17 @@ vim.api.nvim_create_autocmd('InsertLeave', {
   command = 'write | doautocmd BufWritePre | doautocmd BufWritePost',
 })
 
-vim.api.nvim_create_autocmd('BufWritePre', {
-  pattern = '*.md',
-  callback = function()
-    local save_cursor = vim.fn.getpos '.'
-    vim.cmd [[silent! %s/\([^\ ]\)$/\1  ]]
-    vim.fn.setpos('.', save_cursor)
-  end,
-})
+-- Add two spaces to the end of every line
+-- vim.api.nvim_create_autocmd('BufWritePre', {
+--   pattern = '*.md',
+--   callback = function()
+--     local save_cursor = vim.fn.getpos '.'
+--     vim.cmd [[silent! %s/\([^\ ]\)$/\1  ]]
+--     vim.fn.setpos('.', save_cursor)
+--   end,
+-- })
 
+-- Remove double spaces
 vim.api.nvim_create_autocmd('BufWritePre', {
   pattern = '*.md',
   callback = function()
