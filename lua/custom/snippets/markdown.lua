@@ -63,6 +63,8 @@ return {
   create_snippet('fraction', [[\frac{<>}{<>}]], { i(1), i(2) }),
   create_snippet('overline', [[\overline{<>}]], { i(1) }),
   create_snippet('powerset', [[\mathcal{P}(<>)]], { i(1) }),
+  create_snippet('languageof', [[\mathcal{L}(<>)]], { i(1) }),
+  create_snippet('hat', [[\hat{<>}]], { i(1) }),
   create_snippet('bar', [[|<>|]], { i(1) }),
   create_snippet('mono', [[\texttt{<>}]], { i(1) }),
   create_snippet('italic', [[\textit{<>}]], { i(1) }),
