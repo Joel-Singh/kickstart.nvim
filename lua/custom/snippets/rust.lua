@@ -93,4 +93,14 @@ align_items: AlignItems::Center,
       { struct_name = i(1, 'struct_name'), exit = i(2, 'properties') }
     )
   ),
+  s(
+    { trig = 'newstruct', snippetType = 'autosnippet' },
+    fmta(
+      [[
+#[derive(<>)]
+struct <>(<>)
+      ]],
+      { i(1), i(2, 'Name'), i(3) }
+    )
+  ),
 }
