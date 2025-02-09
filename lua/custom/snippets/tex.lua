@@ -84,4 +84,65 @@ return {
   create_snippet('cvec', [[\langle <>, <> \rangle]], { i(1), i(2) }),
   create_snippet('img', [[![<>](<>){width=<> height=<>}]], { i(1, 'alt-text'), i(2, 'link'), i(3), i(4) }),
   s({ trig = 'textit', snippetType = 'autosnippet' }, fmta([[\textit{<text>}<end>]], { text = i(1), ['end'] = i(2) })),
+  s(
+    { trig = 'template' },
+    fmta(
+      [[
+\documentclass{article}
+    % General document formatting
+    \usepackage[margin=0.7in]{geometry}
+    \usepackage[parfill]{parskip}
+    \usepackage[utf8]{inputenc}
+    
+    % Related to math
+    \usepackage{amsmath,amssymb,amsfonts,amsthm}
+
+    \usepackage{graphicx}
+      \graphicspath{ {~/Personal/Denison/spring-2024/CS234/assignments/a2/} }
+    \usepackage{tikz}
+    \usepackage{xcolor}
+
+\title{Assignment <>}
+\author{
+  Joel Singh
+}
+
+\date{\today}
+
+\newcommand{\image}[1]{
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{#1}
+  \end{figure}
+}
+
+\usepackage{etoolbox}
+\preto\subsection{\clearpage} % Inserts \clearpage before every subsection
+
+\begin{document}
+\maketitle
+
+\setcounter{section}{-1}
+\section{Introduction}
+
+\begin{itemize}
+  \item 2.2, 2.4  
+  \item 2.8, 2.12, 2.14, 2.15, 2.16, 2.18, 2.19, 2.24, 2.27  
+  \item 3.4, 3.5  
+  \item 3.13, 3.19  
+  \item 3.27, 3.33  
+  \item 3.36, 3.38  
+  \item 3.40, 3.41, 3.42, 3.44, 3.46  
+\end{itemize}
+
+
+\section{<>}
+\subsection*{<>}
+\textcolor{blue}{<>}
+
+\end{document}
+  ]],
+      { i(1), i(2), i(3), i(4) }
+    )
+  ),
 }
