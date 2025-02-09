@@ -1,6 +1,7 @@
 local function run_current_file()
   vim.cmd 'wa'
   if vim.bo.filetype == 'tex' then
+    vim.cmd 'silent !mkdir -p %:h/output/ &'
     vim.cmd 'silent !zathura %:h/output/*.pdf &'
   end
 
