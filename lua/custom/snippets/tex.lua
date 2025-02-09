@@ -81,6 +81,8 @@ return {
   create_snippet('-vec', [[vec]]),
   create_snippet('vec', [[\mathbf{<>}]], { i(1) }),
   create_snippet('cvec', [[\langle <>, <> \rangle]], { i(1), i(2) }),
+  create_snippet('tcblue', [[\textcolor{blue}{<>}]], { i(1) }),
+  create_snippet('tcred', [[\textcolor{red}{<>}]], { i(1) }),
   create_snippet('img', [[![<>](<>){width=<> height=<>}]], { i(1, 'alt-text'), i(2, 'link'), i(3), i(4) }),
   s({ trig = 'textit', snippetType = 'autosnippet' }, fmta([[\textit{<text>}<end>]], { text = i(1), ['end'] = i(2) })),
   s(
