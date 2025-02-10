@@ -65,6 +65,7 @@ return {
   create_snippet('bar', [[|<>|]], { i(1) }),
   create_snippet('mono', [[\texttt{<>}]], { i(1) }),
   create_snippet('italic', [[\textit{<>}]], { i(1) }),
+  create_snippet('x->', [[\xrightarrow{<>}]], { i(1) }),
   create_snippet('->', [[\rightarrow]]),
   create_snippet('lambda', [[\lambda]]),
   create_snippet('delta', [[\delta]]),
