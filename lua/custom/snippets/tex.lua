@@ -114,7 +114,7 @@ return {
     \usepackage{amsmath,amssymb,amsfonts,amsthm}
 
     \usepackage{graphicx}
-      \graphicspath{ {~/Personal/Denison/spring-2024/CS234/assignments/a2/} }
+      \graphicspath{ {~/Personal/Denison/spring-2024/CS234/assignments/<>/} }
     \usepackage{tikz}
     \usepackage{xcolor}
 
@@ -140,6 +140,7 @@ return {
 
 \setcounter{section}{-1}
 \section{Introduction}
+<>
 
 \begin{itemize}
   \item 2.2, 2.4  
@@ -158,7 +159,7 @@ return {
 
 \end{document}
   ]],
-      { i(1), i(2), i(3), i(4) }
+      { i(1), i(2), i(3), i(4), i(5), i(6) }
     )
   ),
 }
