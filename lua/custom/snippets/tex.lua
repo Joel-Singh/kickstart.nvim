@@ -85,7 +85,21 @@ return {
   create_snippet('tcblue', [[\textcolor{blue}{<>}]], { i(1) }),
   create_snippet('tcred', [[\textcolor{red}{<>}]], { i(1) }),
   create_snippet('img', [[![<>](<>){width=<> height=<>}]], { i(1, 'alt-text'), i(2, 'link'), i(3), i(4) }),
+  create_snippet('subsection', [[\subsection*{<>}]], { i(1) }),
   s({ trig = 'textit', snippetType = 'autosnippet' }, fmta([[\textit{<text>}<end>]], { text = i(1), ['end'] = i(2) })),
+  s(
+    { trig = 'list' },
+    fmta(
+      [[
+\begin{itemize}
+  \item <>
+  \item <>
+  \item <>
+\end{itemize}
+]],
+      { i(1), i(2), i(3) }
+    )
+  ),
   s(
     { trig = 'template' },
     fmta(
