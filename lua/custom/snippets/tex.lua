@@ -79,10 +79,12 @@ return {
   create_snippet('bar', [[|<>|]], { i(1) }),
   create_snippet('paren', [[(<>)]], { i(1) }),
   create_snippet('sqrt', [[\sqrt{<>}]], { i(1) }),
-  create_snippet('-vec', [[vec]]),
-  create_snippet('vec', [[\mathbf{<>}]], { i(1) }),
+  create_snippet('-vec', [[\mathbf{<>}]], { i(1) }),
   create_snippet('cvec', [[\langle <>, <> \rangle]], { i(1), i(2) }),
   create_snippet('tcblue', [[\textcolor{blue}{<>}]], { i(1) }),
+  create_snippet('ihat', [[\hat{\i}]]),
+  create_snippet('jhat', [[\hat{\j}]]),
+  create_snippet('khat', [[\hat{\h}]]),
   create_snippet('tcred', [[\textcolor{red}{<>}]], { i(1) }),
   create_snippet('img', [[![<>](<>){width=<> height=<>}]], { i(1, 'alt-text'), i(2, 'link'), i(3), i(4) }),
   create_snippet('subsection', [[\subsection*{<>}]], { i(1) }),
@@ -160,6 +162,36 @@ return {
 \end{document}
   ]],
       { i(1), i(2), i(3), i(4), i(5), i(6) }
+    )
+  ),
+  s(
+    { trig = 'minimal-template' },
+    fmta(
+      [[
+\documentclass{article}
+    % General document formatting
+    \usepackage[margin=0.7in]{geometry}
+    \usepackage[parfill]{parskip}
+    \usepackage[utf8]{inputenc}
+    
+    % Related to math
+    \usepackage{amsmath,amssymb,amsfonts,amsthm}
+
+\begin{document}
+
+Name, date, Exercise X
+
+\section*{Part a}
+
+Put your answer to part a here
+
+\section*{Part b}
+
+etc
+
+\end{document}
+    ]],
+      {}
     )
   ),
 }
