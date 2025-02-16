@@ -91,7 +91,7 @@ return {
   create_snippet('subsection', [[\subsection*{<>}]], { i(1) }),
   s({ trig = 'textit', snippetType = 'autosnippet' }, fmta([[\textit{<text>}<end>]], { text = i(1), ['end'] = i(2) })),
   s(
-    { trig = 'list' },
+    { trig = 'list', snippetType = 'autosnippet' },
     fmta(
       [[
 \begin{itemize}
@@ -99,6 +99,19 @@ return {
   \item <>
   \item <>
 \end{itemize}
+]],
+      { i(1), i(2), i(3) }
+    )
+  ),
+  s(
+    { trig = 'numlist', snippetType = 'autosnippet' },
+    fmta(
+      [[
+\begin{enumerate}
+  \item <>
+  \item <>
+  \item <>
+\end{enumerate}
 ]],
       { i(1), i(2), i(3) }
     )
