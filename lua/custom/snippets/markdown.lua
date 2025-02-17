@@ -44,7 +44,7 @@ return {
   create_snippet('integers', [[\mathbb{Z}]]),
   create_snippet('realnumbers', [[\mathbb{R}]]),
   create_snippet('rationalnumbers', [[\mathbb{Q}]]),
-  create_snippet('pi', [[\pi]]),
+  create_snippet('-pi', [[\pi]]),
   create_snippet('geq', [[\geq]]),
   create_snippet('leq', [[\leq]]),
   create_snippet('neq', [[\neq]]),
