@@ -72,7 +72,7 @@ return {
   create_snippet('delta', [[\delta]]),
   create_snippet('land', [[\land]]),
   create_snippet('lor', [[\lor]]),
-  create_snippet('neg', [[\neg]]),
+  create_snippet('-neg', [[\neg]]),
   create_snippet('implies', [[\implies]]),
   create_snippet('biimplies', [[\iff]]),
   create_snippet('forall', [[\forall]]),
