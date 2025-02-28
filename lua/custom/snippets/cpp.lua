@@ -51,4 +51,22 @@ int main() {
       { i(0) }
     )
   ),
+  s(
+    { trig = '()', snippetType = 'autosnippet' },
+    fmt(
+      [[
+({}){}
+  ]],
+      { i(1), i(2) }
+    )
+  ),
+  s(
+    { trig = '()', snippetType = 'autosnippet' },
+    fmta(
+      [[
+{<>}<>
+  ]],
+      { i(1), i(2) }
+    )
+  ),
 }
