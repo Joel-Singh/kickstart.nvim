@@ -81,6 +81,7 @@ return {
   create_snippet('paren', [[(<>)]], { i(1) }),
   create_snippet('sqrt', [[\sqrt{<>}]], { i(1) }),
   create_snippet('-vec', [[vec]]),
+  create_snippet('nll', [[\newline]]),
   create_snippet('vec', [[\mathbf{<>}]], { i(1) }),
   create_snippet('cvec', [[\langle <>, <> \rangle]], { i(1), i(2) }),
   create_snippet('img', [[![<>](<>){width=<> height=<>}]], { i(1, 'alt-text'), i(2, 'link'), i(3), i(4) }),
