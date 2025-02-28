@@ -69,4 +69,35 @@ int main() {
       { i(1), i(2) }
     )
   ),
+  s(
+    { trig = 'comment-block-beginning' },
+    fmta(
+      [[
+//================================================= 
+// Matt Kretchmar 
+// <>
+// <> 
+// <>
+// 
+//================================================= 
+  ]],
+      { i(1, 'Month Year'), i(2, 'filename.ext'), i(3, 'Description') }
+    )
+  ),
+  s(
+    { trig = 'comment-block-beginning' },
+    fmta(
+      [[
+//================================================= 
+// <>
+// <>
+// Parameters:
+// <> 
+// Return Value:
+//  <>
+//================================================= 
+  ]],
+      { i(1, 'functionName'), i(2, 'Description'), i(3, 'parameters'), i(4, 'Return Value') }
+    )
+  ),
 }
