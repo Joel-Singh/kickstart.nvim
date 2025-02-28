@@ -74,7 +74,7 @@ int main() {
     fmta(
       [[
 //================================================= 
-// Matt Kretchmar 
+// Joel Singh
 // <>
 // <> 
 // <>
@@ -85,14 +85,14 @@ int main() {
     )
   ),
   s(
-    { trig = 'comment-block-beginning' },
+    { trig = 'comment-block-function' },
     fmta(
       [[
 //================================================= 
 // <>
 // <>
 // Parameters:
-// <> 
+//  <> 
 // Return Value:
 //  <>
 //================================================= 
