@@ -27,3 +27,4 @@ local ms = ls.multi_snippet
 local k = require('luasnip.nodes.key_indexer').new_key
 
 require('luasnip.loaders.from_lua').load { paths = { '~/nvim/lua/custom/snippets' } }
+ls.filetype_extend("markdown", { "tex" })
