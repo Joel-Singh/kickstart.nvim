@@ -479,6 +479,19 @@ require('lazy').setup({
 
           map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction', { 'n', 'x' })
 
+
+          local function add_to_global_dict()
+            vim.lsp.buf.code_action({
+                filter = function (codeAction)
+                  return string.find(codeAction.title, "global") ~= nil
+                end,
+                apply = true
+            })
+          end
+          if vim.bo.filetype == 'markdown' then
+            map('<leader>cg', add_to_global_dict, '[C]ode Add To [G]lobal Dict', { 'n', 'x' })
+          end
+
           -- WARN: This is not Goto Definition, this is Goto Declaration.
           --  For example, in C this would take you to the header.
           map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
