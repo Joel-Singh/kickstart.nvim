@@ -68,6 +68,7 @@ return {
   create_snippet('x->', [[\xrightarrow{<>}]], { i(1) }),
   create_snippet('->', [[\rightarrow]]),
   create_snippet('lambda', [[\lambda]]),
+  create_snippet('omega', [[\Omega{<>}]], { i(1) }),
   create_snippet('delta', [[\delta]]),
   create_snippet('land', [[\land]]),
   create_snippet('lor', [[\lor]]),
@@ -86,6 +87,7 @@ return {
   create_snippet('ihat', [[\mathbf{\hat{i}}]]),
   create_snippet('jhat', [[\mathbf{\hat{j}}]]),
   create_snippet('khat', [[\mathbf{\hat{k}}]]),
+  create_snippet('nll', [[\newline]]),
   create_snippet('tcred', [[\textcolor{red}{<>}]], { i(1) }),
   create_snippet('img', [[![<>](<>){width=<> height=<>}]], { i(1, 'alt-text'), i(2, 'link'), i(3), i(4) }),
   create_snippet('-subsection', [[\subsection{<>}]], { i(1) }),
@@ -117,4 +119,17 @@ return {
     )
   ),
   s({ trig = '()', snippetType = 'autosnippet', wordTrig = false }, fmta([[(<>)]], { i(1) })),
+  s(
+    { trig = '-align', snippetType = 'autosnippet' },
+    fmta(
+      [[
+\textcolor{blue}{
+  \begin{align*}
+  <>
+  \end{align*}
+}
+]],
+      { i(1) }
+    )
+  ),
 }
