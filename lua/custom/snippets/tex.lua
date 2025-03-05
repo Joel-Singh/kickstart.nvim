@@ -68,7 +68,6 @@ return {
   create_snippet('x->', [[\xrightarrow{<>}]], { i(1) }),
   create_snippet('->', [[\rightarrow]]),
   create_snippet('lambda', [[\lambda]]),
-  create_snippet('omega', [[\Omega{<>}]], { i(1) }),
   create_snippet('delta', [[\delta]]),
   create_snippet('land', [[\land]]),
   create_snippet('lor', [[\lor]]),
