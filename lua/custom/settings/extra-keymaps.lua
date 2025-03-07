@@ -8,4 +8,6 @@ vim.keymap.set('n', '<A-l>', '<CMD>tabnext<CR>', { desc = 'Tab Next' })
 vim.keymap.set('n', '<A-h>', '<CMD>tabprevious<CR>', { desc = 'Tab Previous' })
 vim.keymap.set('n', '<A-c>', '<CMD>tabclose<CR>', { desc = 'Tab Close' })
 
+vim.keymap.set('i', '<C-i>', '<BS>')
+
 vim.cmd 'command! Q wqa'
