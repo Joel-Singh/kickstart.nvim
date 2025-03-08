@@ -49,8 +49,6 @@ return {
   create_snippet('kj', [[\]]),
   create_snippet('nchoosek', [[\binom{<>}{<>}]], { i(1), i(2) }),
   create_snippet('mm', [[$<>$]], { i(1) }),
-  create_snippet('-text', [[text]]),
-  create_snippet('text', [[\text{ <> }]], { i(1) }),
   create_snippet('-set', [[\{<>\}]], { i(1) }),
   create_snippet('overline', [[\overline{<>}]], { i(1) }),
   create_snippet('powerset', [[\mathcal{P}(<>)]], { i(1) }),
@@ -82,7 +80,7 @@ return {
   create_snippet('-subsection', [[\subsection{<>}]], { i(1) }),
   s({ trig = 'textit', snippetType = 'autosnippet' }, fmta([[\textit{<text>}<end>]], { text = i(1), ['end'] = i(2) })),
   s(
-    { trig = 'list', snippetType = 'autosnippet' },
+    { trig = 'list' },
     fmta(
       [[
 \begin{itemize}
@@ -95,7 +93,14 @@ return {
     )
   ),
   s(
-    { trig = 'numlist', snippetType = 'autosnippet' },
+    { trig = 'text' },
+    fmta(
+      [[\text{ <> }]],
+      { i(1) }
+    )
+  ),
+  s(
+    { trig = 'numlist' },
     fmta(
       [[
 \begin{enumerate}
