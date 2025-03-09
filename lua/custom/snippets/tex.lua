@@ -43,7 +43,7 @@ return {
   create_snippet('integers', [[\mathbb{Z}]]),
   create_snippet('realnumbers', [[\mathbb{R}]]),
   create_snippet('rationalnumbers', [[\mathbb{Q}]]),
-  create_snippet('dottimes', [[\cdot ]]),
+  create_snippet('dottimes', [[\cdot]]),
   create_snippet('ellipses', [[\ldots]]),
   create_snippet('jk', [[\]]),
   create_snippet('kj', [[\]]),
@@ -62,9 +62,9 @@ return {
   create_snippet('lor', [[\lor]]),
   create_snippet('neg', [[\neg]]),
   create_snippet('sqrt', [[\sqrt{<>}]], { i(1) }),
-  create_snippet('-vec', [[\mathbf{<>}]], { i(1) }),
   create_snippet('zerovec', [[\mathbf{0}]]),
   create_snippet('cvec', [[\langle <> \rangle]], { i(1) }),
+  create_snippet('displaymath', '\\[\n<>\n\\]', { i(1) }),
   create_snippet('colorblue', [[
   \color{blue}
   <>
@@ -144,4 +144,5 @@ return {
     )
   ),
   s({ trig = 'suchthat', snippetType = 'autosnippet', wordTrig = false }, fmta([[.\ ]], {})),
+  s({ trig = 'vv', snippetType = 'autosnippet', wordTrig = false }, fmta([[\mathbf{<>}]], {i(1)})),
 }
