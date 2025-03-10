@@ -38,7 +38,6 @@ return {
   create_snippet('excsubset', [[\subset]]),
   create_snippet('excsuperset', [[\supset]]),
   create_snippet('-union', [[\cup]]),
-  create_snippet('intersection', [[\cap]]),
   create_snippet('naturalnumbers', [[\mathbb{N}]]),
   create_snippet('integers', [[\mathbb{Z}]]),
   create_snippet('realnumbers', [[\mathbb{R}]]),
@@ -56,15 +55,15 @@ return {
   create_snippet('mono', [[\texttt{<>}]], { i(1) }),
   create_snippet('italic', [[\textit{<>}]], { i(1) }),
   create_snippet('x->', [[\xrightarrow{<>}]], { i(1) }),
-  create_snippet('->', [[\rightarrow]]),
+  create_snippet('->x', [[\overrightarrow{<>}]], { i(1) }),
+  -- create_snippet('->', [[\rightarrow]]),
   create_snippet('deltahat', [[\hat{\delta}]]),
   create_snippet('land', [[\land]]),
   create_snippet('lor', [[\lor]]),
   create_snippet('neg', [[\neg]]),
   create_snippet('sqrt', [[\sqrt{<>}]], { i(1) }),
   create_snippet('zerovec', [[\mathbf{0}]]),
-  create_snippet('cvec', [[\langle <> \rangle]], { i(1) }),
-  create_snippet('displaymath', '\\[\n<>\n\\]', { i(1) }),
+  create_snippet('cvv', [[\langle <> \rangle]], { i(1) }),
   create_snippet('colorblue', [[
   \color{blue}
   <>
@@ -145,4 +144,11 @@ return {
   ),
   s({ trig = 'suchthat', snippetType = 'autosnippet', wordTrig = false }, fmta([[.\ ]], {})),
   s({ trig = 'vv', snippetType = 'autosnippet', wordTrig = false }, fmta([[\mathbf{<>}]], {i(1)})),
+  s(
+    { trig = 'displaymath' },
+    fmta(
+      '\\[\n<>\n\\]',
+      { i(1), }
+    )
+  ),
 }
