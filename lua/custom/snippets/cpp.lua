@@ -43,10 +43,10 @@ int main() {
     )
   ),
   s(
-    { trig = 'include', snippetType = 'autosnippet' },
+    { trig = 'include' },
     fmt(
       [[
-#include <{}>
+#include {}
   ]],
       { i(0) }
     )
