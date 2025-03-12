@@ -38,10 +38,6 @@ return {
   create_snippet('excsubset', [[\subset]]),
   create_snippet('excsuperset', [[\supset]]),
   create_snippet('-union', [[\cup]]),
-  create_snippet('naturalnumbers', [[\mathbb{N}]]),
-  create_snippet('integers', [[\mathbb{Z}]]),
-  create_snippet('realnumbers', [[\mathbb{R}]]),
-  create_snippet('rationalnumbers', [[\mathbb{Q}]]),
   create_snippet('dottimes', [[\cdot]]),
   create_snippet('ellipses', [[\ldots]]),
   create_snippet('jk', [[\]]),
@@ -52,11 +48,8 @@ return {
   create_snippet('overline', [[\overline{<>}]], { i(1) }),
   create_snippet('powerset', [[\mathcal{P}(<>)]], { i(1) }),
   create_snippet('bar', [[|<>|]], { i(1) }),
-  create_snippet('mono', [[\texttt{<>}]], { i(1) }),
-  create_snippet('italic', [[\textit{<>}]], { i(1) }),
   create_snippet('x->', [[\xrightarrow{<>}]], { i(1) }),
   create_snippet('->x', [[\overrightarrow{<>}]], { i(1) }),
-  -- create_snippet('->', [[\rightarrow]]),
   create_snippet('deltahat', [[\hat{\delta}]]),
   create_snippet('sqrt', [[\sqrt{<>}]], { i(1) }),
   create_snippet('zerovec', [[\mathbf{0}]]),
@@ -72,9 +65,17 @@ return {
   create_snippet('nll', [[\newline]]),
   create_snippet('tcred', [[\textcolor{red}{<>}]], { i(1) }),
   create_snippet('img', [[![<>](<>){width=<> height=<>}]], { i(1, 'alt-text'), i(2, 'link'), i(3), i(4) }),
-  create_snippet('summation', [[\sum_{<>}^{<>}<>]], { i(1, 'from'), i(2, 'to'), i(3, 'summand')}),
+  s(
+    { trig = 'summation' },
+    fmta(
+      [[\sum_{<>}^{<>}<>]],
+      { i(1, 'from'), i(2, 'to'), i(3, 'summand')}
+    )
+  ),
   create_snippet('-subsection', [[\subsection{<>}]], { i(1) }),
-  s({ trig = 'textit', snippetType = 'autosnippet' }, fmta([[\textit{<text>}<end>]], { text = i(1), ['end'] = i(2) })),
+  s({ trig = 'italic' }, fmta([[\textit{<>}]], { i(1) })),
+  s({ trig = 'bold' }, fmta([[\textbf{<>}]], { i(1) })),
+  s({ trig = 'mono' }, fmta([[\texttt{<>}]], { i(1) })),
   s(
     { trig = 'list' },
     fmta(
@@ -91,7 +92,7 @@ return {
   s(
     { trig = 'text' },
     fmta(
-      [[\text{ <> }]],
+      [[\text{<>}]],
       { i(1) }
     )
   ),
@@ -140,7 +141,12 @@ return {
     )
   ),
   s({ trig = 'suchthat', snippetType = 'autosnippet', wordTrig = false }, fmta([[.\ ]], {})),
+  s({ trig = 'naturalnumbers' }, fmta([[\mathbb{N}]], {})),
+  s({ trig = 'integers' }, fmta([[\mathbb{Z}]], {})),
+  s({ trig = 'realnumbers' }, fmta([[\mathbb{R}]], {})),
+  s({ trig = 'rationalnumbers'}, fmta([[\mathbb{Q}]], {})),
   s({ trig = 'vv', snippetType = 'autosnippet', wordTrig = false }, fmta([[\mathbf{<>}]], {i(1)})),
+
   s(
     { trig = 'displaymath' },
     fmta(
