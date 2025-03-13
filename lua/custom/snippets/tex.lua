@@ -40,8 +40,6 @@ return {
   create_snippet('-union', [[\cup]]),
   create_snippet('dottimes', [[\cdot]]),
   create_snippet('ellipses', [[\ldots]]),
-  create_snippet('jk', [[\]]),
-  create_snippet('kj', [[\]]),
   create_snippet('nchoosek', [[\binom{<>}{<>}]], { i(1), i(2) }),
   create_snippet('mm', [[$<>$]], { i(1) }),
   create_snippet('-set', [[\{<>\}]], { i(1) }),
@@ -141,6 +139,8 @@ return {
     )
   ),
   s({ trig = 'suchthat', snippetType = 'autosnippet', wordTrig = false }, fmta([[.\ ]], {})),
+  s({ trig = 'jk', snippetType = 'autosnippet', wordTrig = false }, fmta([[\]], {})),
+  s({ trig = 'kj', snippetType = 'autosnippet', wordTrig = false }, fmta([[\]], {})),
   s({ trig = 'naturalnumbers' }, fmta([[\mathbb{N}]], {})),
   s({ trig = 'integers' }, fmta([[\mathbb{Z}]], {})),
   s({ trig = 'realnumbers' }, fmta([[\mathbb{R}]], {})),
