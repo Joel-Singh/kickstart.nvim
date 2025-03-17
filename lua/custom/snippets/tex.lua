@@ -33,6 +33,8 @@ end
 
 return {
   create_snippet('emptyset', [[\emptyset]]),
+  create_snippet('>=', [[\geq]]),
+  create_snippet('<=', [[\leq]]),
   create_snippet('subset', [[\subseteq]]),
   create_snippet('superset', [[\supseteq]]),
   create_snippet('excsubset', [[\subset]]),
@@ -42,6 +44,7 @@ return {
   create_snippet('ellipses', [[\ldots]]),
   create_snippet('nchoosek', [[\binom{<>}{<>}]], { i(1), i(2) }),
   create_snippet('mm', [[$<>$]], { i(1) }),
+  create_snippet('dmm', "\\[<>\\]", { i(1) }),
   create_snippet('-set', [[\{<>\}]], { i(1) }),
   create_snippet('overline', [[\overline{<>}]], { i(1) }),
   create_snippet('powerset', [[\mathcal{P}(<>)]], { i(1) }),
