@@ -55,11 +55,6 @@ return {
   create_snippet('sqrt', [[\sqrt{<>}]], { i(1) }),
   create_snippet('zerovec', [[\mathbf{0}]]),
   create_snippet('cvv', [[\langle <> \rangle]], { i(1) }),
-  create_snippet('colorblue', [[
-  \color{blue}
-  <>
-  \color{black}
-  ]], { i(1) }),
   create_snippet('ihat', [[\mathbf{\hat{i}}]]),
   create_snippet('jhat', [[\mathbf{\hat{j}}]]),
   create_snippet('khat', [[\mathbf{\hat{k}}]]),
@@ -78,7 +73,7 @@ return {
   s({ trig = 'bold' }, fmta([[\textbf{<>}]], { i(1) })),
   s({ trig = 'mono' }, fmta([[\texttt{<>}]], { i(1) })),
   s(
-    { trig = 'list' },
+    { trig = 'itemize' },
     fmta(
       [[
 \begin{itemize}
@@ -98,7 +93,7 @@ return {
     )
   ),
   s(
-    { trig = 'numlist' },
+    { trig = 'enumerate' },
     fmta(
       [[
 \begin{enumerate}
@@ -146,6 +141,7 @@ return {
   s({ trig = 'kj', snippetType = 'autosnippet', wordTrig = false }, fmta([[\]], {})),
   s({ trig = 'jl', snippetType = 'autosnippet', wordTrig = false }, fmta([[&]], {})),
   s({ trig = 'lj', snippetType = 'autosnippet', wordTrig = false }, fmta([[&]], {})),
+  s({ trig = '_', snippetType = 'autosnippet', wordTrig = false }, fmta([[\_]], {})),
   s({ trig = 'naturalnumbers' }, fmta([[\mathbb{N}]], {})),
   s({ trig = 'integers' }, fmta([[\mathbb{Z}]], {})),
   s({ trig = 'realnumbers' }, fmta([[\mathbb{R}]], {})),
@@ -156,6 +152,17 @@ return {
     { trig = 'displaymath' },
     fmta(
       '\\[\n<>\n\\]',
+      { i(1), }
+    )
+  ),
+  s(
+    { trig = 'colorblue' },
+    fmta(
+      [[
+  \color{blue}
+  <>
+  \color{black}
+  ]],
       { i(1), }
     )
   ),
