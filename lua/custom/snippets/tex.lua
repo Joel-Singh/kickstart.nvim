@@ -59,6 +59,7 @@ return {
   create_snippet('jhat', [[\mathbf{\hat{j}}]]),
   create_snippet('khat', [[\mathbf{\hat{k}}]]),
   create_snippet('nll', [[\newline]]),
+  create_snippet('npp', [[\newpage]]),
   create_snippet('tcred', [[\textcolor{red}{<>}]], { i(1) }),
   create_snippet('img', [[![<>](<>){width=<> height=<>}]], { i(1, 'alt-text'), i(2, 'link'), i(3), i(4) }),
   s(
