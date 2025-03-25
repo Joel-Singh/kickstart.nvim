@@ -51,7 +51,6 @@ return {
   create_snippet('bar', [[|<>|]], { i(1) }),
   create_snippet('x->', [[\xrightarrow{<>}]], { i(1) }),
   create_snippet('->x', [[\overrightarrow{<>}]], { i(1) }),
-  create_snippet('deltahat', [[\hat{\delta}]]),
   create_snippet('sqrt', [[\sqrt{<>}]], { i(1) }),
   create_snippet('zerovec', [[\mathbf{0}]]),
   create_snippet('cvv', [[\langle <> \rangle]], { i(1) }),
@@ -67,6 +66,13 @@ return {
     fmta(
       [[\sum_{<>}^{<>}<>]],
       { i(1, 'from'), i(2, 'to'), i(3, 'summand')}
+    )
+  ),
+  s(
+    { trig = 'productation' },
+    fmta(
+      [[\prod_{<>}^{<>}<>]],
+      { i(1, 'from'), i(2, 'to'), i(3, 'productand')}
     )
   ),
   create_snippet('-subsection', [[\subsection{<>}]], { i(1) }),
@@ -165,6 +171,20 @@ return {
   \color{black}
   ]],
       { i(1), }
+    )
+  ),
+  s(
+    { trig = 'deltahat' },
+    fmta(
+      [[\hat{\delta}]],
+      {  }
+    )
+  ),
+  s(
+    { trig = 'Language' },
+    fmta(
+      [[\mathcal{L}]],
+      {  }
     )
   ),
 }
