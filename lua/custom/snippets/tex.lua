@@ -148,7 +148,7 @@ return {
   s({ trig = 'kj', snippetType = 'autosnippet', wordTrig = false }, fmta([[\]], {})),
   s({ trig = 'jl', snippetType = 'autosnippet', wordTrig = false }, fmta([[&]], {})),
   s({ trig = 'lj', snippetType = 'autosnippet', wordTrig = false }, fmta([[&]], {})),
-  s({ trig = '_', snippetType = 'autosnippet', wordTrig = false }, fmta([[\_]], {})),
+  s({ trig = '__', snippetType = 'autosnippet', wordTrig = false }, fmta([[\_]], {})),
   s({ trig = 'naturalnumbers' }, fmta([[\mathbb{N}]], {})),
   s({ trig = 'integers' }, fmta([[\mathbb{Z}]], {})),
   s({ trig = 'realnumbers' }, fmta([[\mathbb{R}]], {})),
