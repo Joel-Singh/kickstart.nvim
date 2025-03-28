@@ -129,8 +129,7 @@ return {
     { trig = 'begin' },
     fmta(
       [[
-\begin{<>}
-<>
+\begin{<>} <>
 \end{<>}
 ]],
       { i(1), i(2), rep(1) }
@@ -148,7 +147,9 @@ return {
   s({ trig = 'kj', snippetType = 'autosnippet', wordTrig = false }, fmta([[\]], {})),
   s({ trig = 'jl', snippetType = 'autosnippet', wordTrig = false }, fmta([[&]], {})),
   s({ trig = 'lj', snippetType = 'autosnippet', wordTrig = false }, fmta([[&]], {})),
+  s({ trig = '?=', snippetType = 'autosnippet', wordTrig = false }, fmta([[\stackrel{?}{=}]], {})),
   s({ trig = '__', snippetType = 'autosnippet', wordTrig = false }, fmta([[\_]], {})),
+  s({ trig = 'vrt', snippetType = 'autosnippet', wordTrig = false }, fmta([[&\vert]], {})),
   s({ trig = 'naturalnumbers' }, fmta([[\mathbb{N}]], {})),
   s({ trig = 'integers' }, fmta([[\mathbb{Z}]], {})),
   s({ trig = 'realnumbers' }, fmta([[\mathbb{R}]], {})),
