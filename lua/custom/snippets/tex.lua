@@ -31,6 +31,11 @@ local function create_snippet(trig, char, nodes)
   return s({ trig = trig, snippetType = 'autosnippet' }, fmta(char, nodes))
 end
 
+local function create_snippet_not_auto(trig, char, nodes)
+  nodes = nodes or {}
+  return s({ trig = trig }, fmta(char, nodes))
+end
+
 return {
   create_snippet('emptyset', [[\emptyset]]),
   create_snippet('geq', [[\geq]]),
@@ -41,13 +46,13 @@ return {
   create_snippet('excsubset', [[\subset]]),
   create_snippet('excsuperset', [[\supset]]),
   create_snippet('-union', [[\cup]]),
-  create_snippet('ellipses', [[\ldots]]),
+  create_snippet_not_auto('ellipses', [[\ldots]]),
   create_snippet('nchoosek', [[\binom{<>}{<>}]], { i(1), i(2) }),
   create_snippet('mm', [[$<>$]], { i(1) }),
   create_snippet('dmm', "\\[<>\\]", { i(1) }),
   create_snippet('-set', [[\{<>\}]], { i(1) }),
   create_snippet('overline', [[\overline{<>}]], { i(1) }),
-  create_snippet('powerset', [[\mathcal{P}(<>)]], { i(1) }),
+  create_snippet_not_auto('powerset', [[\mathcal{P}(<>)]], { i(1) }),
   create_snippet('bar', [[|<>|]], { i(1) }),
   create_snippet('x->', [[\xrightarrow{<>}]], { i(1) }),
   create_snippet('->x', [[\overrightarrow{<>}]], { i(1) }),
@@ -113,14 +118,12 @@ return {
     )
   ),
   s(
-    { trig = '-align', snippetType = 'autosnippet' },
+    { trig = 'align' },
     fmta(
       [[
-\textcolor{blue}{
   \begin{align*}
   <>
   \end{align*}
-}
 ]],
       { i(1) }
     )
