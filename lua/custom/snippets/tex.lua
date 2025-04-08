@@ -28,7 +28,7 @@ local k = require('luasnip.nodes.key_indexer').new_key
 
 local function create_snippet(trig, char, nodes)
   nodes = nodes or {}
-  return s({ trig = trig, snippetType = 'autosnippet' }, fmta(char, nodes))
+  return s({ trig = trig, snippetType = 'autosnippet', wordTrig=false }, fmta(char, nodes))
 end
 
 local function create_snippet_not_auto(trig, char, nodes)
@@ -48,8 +48,8 @@ return {
   create_snippet('-union', [[\cup]]),
   create_snippet_not_auto('ellipses', [[\ldots]]),
   create_snippet('nchoosek', [[\binom{<>}{<>}]], { i(1), i(2) }),
-  create_snippet('mm', [[$<>$]], { i(1) }),
   create_snippet('dmm', "\\[<>\\]", { i(1) }),
+  s({ trig = 'mm', snippetType = 'autosnippet', wordTrig=true }, fmta([[$<>$]], { i(1) })),
   create_snippet('-set', [[\{<>\}]], { i(1) }),
   create_snippet('overline', [[\overline{<>}]], { i(1) }),
   create_snippet_not_auto('powerset', [[\mathcal{P}(<>)]], { i(1) }),
