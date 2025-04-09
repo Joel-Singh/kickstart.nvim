@@ -152,7 +152,7 @@ return {
   s({ trig = 'lj', snippetType = 'autosnippet', wordTrig = false }, fmta([[&]], {})),
   s({ trig = '?=', snippetType = 'autosnippet', wordTrig = false }, fmta([[\stackrel{?}{=}]], {})),
   s({ trig = '__', snippetType = 'autosnippet', wordTrig = false }, fmta([[\_]], {})),
-  s({ trig = 'vrt', snippetType = 'autosnippet', wordTrig = false }, fmta([[&\vert]], {})),
+  s({ trig = 'vrt', snippetType = 'autosnippet', wordTrig = false }, fmta([[&\vert &]], {})),
   s({ trig = 'naturalnumbers' }, fmta([[\mathbb{N}]], {})),
   s({ trig = 'integers' }, fmta([[\mathbb{Z}]], {})),
   s({ trig = 'realnumbers' }, fmta([[\mathbb{R}]], {})),
