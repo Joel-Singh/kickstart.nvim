@@ -139,7 +139,7 @@ return {
     )
   ),
   s(
-    { trig = 'fraction' },
+    { trig = 'frr', snippetType='autosnippet', wordTrig = false },
     fmta(
       [[\frac{<>}{<>}]],
       { i(1), i(2) }
