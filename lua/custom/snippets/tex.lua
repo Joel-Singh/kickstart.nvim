@@ -84,6 +84,7 @@ return {
   s({ trig = 'italic' }, fmta([[\textit{<>}]], { i(1) })),
   s({ trig = 'bold' }, fmta([[\textbf{<>}]], { i(1) })),
   s({ trig = 'mono' }, fmta([[\texttt{<>}]], { i(1) })),
+  s({ trig = 'mnn', snippetType='autosnippet', wordTrig=false }, fmta([[\texttt{<>}]], { i(1) })),
   s(
     { trig = 'itemize' },
     fmta(
@@ -140,6 +141,13 @@ return {
   ),
   s(
     { trig = 'frr', snippetType='autosnippet', wordTrig = false },
+    fmta(
+      [[\frac{<>}{<>}]],
+      { i(1), i(2) }
+    )
+  ),
+  s(
+    { trig = 'fraction', wordTrig = false },
     fmta(
       [[\frac{<>}{<>}]],
       { i(1), i(2) }
