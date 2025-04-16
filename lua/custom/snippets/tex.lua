@@ -147,6 +147,13 @@ return {
     )
   ),
   s(
+    { trig = 'deg', snippetType='autosnippet', wordTrig = false },
+    fmta(
+      [[^\circ]],
+      {  }
+    )
+  ),
+  s(
     { trig = 'fraction', wordTrig = false },
     fmta(
       [[\frac{<>}{<>}]],
