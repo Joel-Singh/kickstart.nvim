@@ -1,5 +1,4 @@
 -- vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, { pattern = { '*.md' }, command = 'set tw=60' })
-vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, { pattern = { '*' }, command = 'Copilot disable' })
 
 vim.api.nvim_create_autocmd(
   { 'BufWritePost' },
